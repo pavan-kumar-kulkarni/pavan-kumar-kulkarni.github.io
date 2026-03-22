@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,11 @@
             --white: #ffffff;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -30,8 +35,10 @@
         body::before {
             content: '';
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background:
                 radial-gradient(ellipse at 20% 50%, rgba(108, 92, 231, 0.08) 0%, transparent 50%),
                 radial-gradient(ellipse at 80% 20%, rgba(0, 206, 201, 0.06) 0%, transparent 50%),
@@ -178,7 +185,7 @@
         .skill-card:hover {
             border-color: var(--accent);
             transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         }
 
         .skill-icon {
@@ -220,7 +227,7 @@
         .project-card:hover {
             border-color: var(--accent);
             transform: translateY(-6px);
-            box-shadow: 0 16px 48px rgba(108, 92, 231, 0.2), 0 8px 24px rgba(0,0,0,0.4);
+            box-shadow: 0 16px 48px rgba(108, 92, 231, 0.2), 0 8px 24px rgba(0, 0, 0, 0.4);
         }
 
         .project-banner {
@@ -236,7 +243,9 @@
         .project-banner::after {
             content: '';
             position: absolute;
-            bottom: 0; left: 0; right: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             height: 40px;
             background: linear-gradient(transparent, var(--card));
         }
@@ -400,164 +409,200 @@
         }
 
         /* --- SVG icons inline --- */
-        .icon-gh { width: 16px; height: 16px; fill: currentColor; vertical-align: middle; }
+        .icon-gh {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+            vertical-align: middle;
+        }
 
         /* --- Responsive --- */
         @media (max-width: 480px) {
-            .hero h1 { font-size: 32px; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .project-banner { height: 140px; font-size: 48px; }
-            .about-card { padding: 24px; }
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-banner {
+                height: 140px;
+                font-size: 48px;
+            }
+
+            .about-card {
+                padding: 24px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<!-- Hero -->
-<header class="hero">
-    <div class="container">
-        <div class="hero-badge">Game Developer & Designer</div>
-        <h1>Pavan Kumar <span>Kulkarni</span></h1>
-        <p>Building polished, playable games from scratch — gameplay systems, custom rendering, procedural audio, and game-feel polish.</p>
-        <div class="hero-links">
-            <a href="https://github.com/pavan-kumar-kulkarni" class="btn-primary" target="_blank">
-                <svg class="icon-gh" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                GitHub
-            </a>
-            <a href="mailto:pk67@buffalo.edu" class="btn-outline">
-                ✉ Contact
-            </a>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-badge">Game Developer & Designer</div>
+            <h1>Pavan Kumar <span>Kulkarni</span></h1>
+            <p>Building polished, playable games from scratch — gameplay systems, custom rendering, procedural audio,
+                and game-feel polish.</p>
+            <div class="hero-links">
+                <a href="https://github.com/pavan-kumar-kulkarni" class="btn-primary" target="_blank">
+                    <svg class="icon-gh" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="mailto:pk67@buffalo.edu" class="btn-outline">
+                    ✉ Contact
+                </a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<!-- Skills -->
-<section class="section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Technical Skills</h2>
-            <div class="divider"></div>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon">🎮</div>
-                <h3>Godot Engine</h3>
-                <p>GDScript, Scene tree, Signals</p>
+    <!-- Projects -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Game Projects</h2>
+                <p>Complete, playable games built from scratch</p>
+                <div class="divider"></div>
             </div>
-            <div class="skill-card">
-                <div class="skill-icon">🎨</div>
-                <h3>Custom Rendering</h3>
-                <p>_draw() API, Animations</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🔊</div>
-                <h3>Procedural Audio</h3>
-                <p>WAV generation, SFX design</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">⚙️</div>
-                <h3>Game Systems</h3>
-                <p>Spawners, FSM AI, Waves</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">✨</div>
-                <h3>Game Feel</h3>
-                <p>Screen shake, Particles, Juice</p>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🏗️</div>
-                <h3>Architecture</h3>
-                <p>Singletons, Signals, Scenes</p>
-            </div>
-        </div>
-    </div>
-</section>
+            <div class="projects-grid">
 
-<!-- Projects -->
-<section class="section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Game Projects</h2>
-            <p>Complete, playable games built from scratch</p>
-            <div class="divider"></div>
-        </div>
-        <div class="projects-grid">
-
-            <!-- NovaStrike -->
-            <a href="https://github.com/pavan-kumar-kulkarni/NovaStrike" target="_blank" class="project-card">
-                <div class="project-banner banner-nova">🔫</div>
-                <div class="project-body">
-                    <h3>NovaStrike</h3>
-                    <div class="project-engine">Godot 4.6.1 · GDScript</div>
-                    <p>A 2D vertical shooter with wave-based difficulty scaling. Features hand-drawn soldiers, zombies, and demons using Godot's _draw() API with real-time animation. Includes procedural WAV audio, 3-layer parallax starfield with twinkling, screen shake, particle explosions, and a multi-track BGM system that intensifies with each wave.</p>
-                    <div class="project-tags">
-                        <span class="tag">Wave System</span>
-                        <span class="tag">Custom Rendering</span>
-                        <span class="tag">Procedural Audio</span>
-                        <span class="tag">Particle FX</span>
-                        <span class="tag">Screen Shake</span>
-                        <span class="tag">Parallax</span>
+                <!-- NovaStrike -->
+                <a href="https://github.com/pavan-kumar-kulkarni/NovaStrike" target="_blank" class="project-card">
+                    <div class="project-banner banner-nova">🔫</div>
+                    <div class="project-body">
+                        <h3>NovaStrike</h3>
+                        <div class="project-engine">Godot 4.6.1 · GDScript</div>
+                        <p>A 2D vertical shooter with wave-based difficulty scaling. Features hand-drawn soldiers,
+                            zombies, and demons using Godot's _draw() API with real-time animation. Includes procedural
+                            WAV audio, 3-layer parallax starfield with twinkling, screen shake, particle explosions, and
+                            a multi-track BGM system that intensifies with each wave.</p>
+                        <div class="project-tags">
+                            <span class="tag">Wave System</span>
+                            <span class="tag">Custom Rendering</span>
+                            <span class="tag">Procedural Audio</span>
+                            <span class="tag">Particle FX</span>
+                            <span class="tag">Screen Shake</span>
+                            <span class="tag">Parallax</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="source-btn">
+                                <svg class="icon-gh" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                                View Source Code →
+                            </span>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <span class="source-btn">
-                            <svg class="icon-gh" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                            View Source Code →
-                        </span>
+                </a>
+
+                <!-- CrystalRunner -->
+                <a href="https://github.com/pavan-kumar-kulkarni/CrystalRunner" target="_blank" class="project-card">
+                    <div class="project-banner banner-crystal">💎</div>
+                    <div class="project-body">
+                        <h3>CrystalRunner</h3>
+                        <div class="project-engine">Godot 4.6.1 · GDScript</div>
+                        <p>A 2D top-down action game where you collect crystals while avoiding enemies. Features enemy
+                            FSM AI with patrol/chase/return states, signal-driven architecture, dynamic difficulty
+                            scaling, procedural audio effects, and HUD with health and score tracking.</p>
+                        <div class="project-tags">
+                            <span class="tag">Enemy FSM AI</span>
+                            <span class="tag">Signal Architecture</span>
+                            <span class="tag">Procedural Audio</span>
+                            <span class="tag">Dynamic Difficulty</span>
+                            <span class="tag">Score System</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="source-btn">
+                                <svg class="icon-gh" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                                View Source Code →
+                            </span>
+                        </div>
                     </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical Skills</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🎮</div>
+                    <h3>Godot Engine</h3>
+                    <p>GDScript, Scene tree, Signals</p>
                 </div>
-            </a>
-
-            <!-- CrystalRunner -->
-            <a href="https://github.com/pavan-kumar-kulkarni/CrystalRunner" target="_blank" class="project-card">
-                <div class="project-banner banner-crystal">💎</div>
-                <div class="project-body">
-                    <h3>CrystalRunner</h3>
-                    <div class="project-engine">Godot 4.6.1 · GDScript</div>
-                    <p>A 2D top-down action game where you collect crystals while avoiding enemies. Features enemy FSM AI with patrol/chase/return states, signal-driven architecture, dynamic difficulty scaling, procedural audio effects, and HUD with health and score tracking.</p>
-                    <div class="project-tags">
-                        <span class="tag">Enemy FSM AI</span>
-                        <span class="tag">Signal Architecture</span>
-                        <span class="tag">Procedural Audio</span>
-                        <span class="tag">Dynamic Difficulty</span>
-                        <span class="tag">Score System</span>
-                    </div>
-                    <div class="project-links">
-                        <span class="source-btn">
-                            <svg class="icon-gh" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                            View Source Code →
-                        </span>
-                    </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Custom Rendering</h3>
+                    <p>_draw() API, Animations</p>
                 </div>
-            </a>
-
+                <div class="skill-card">
+                    <div class="skill-icon">🔊</div>
+                    <h3>Procedural Audio</h3>
+                    <p>WAV generation, SFX design</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Game Systems</h3>
+                    <p>Spawners, FSM AI, Waves</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">✨</div>
+                    <h3>Game Feel</h3>
+                    <p>Screen shake, Particles, Juice</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🏗️</div>
+                    <h3>Architecture</h3>
+                    <p>Singletons, Signals, Scenes</p>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- About -->
-<section class="section">
-    <div class="container">
-        <div class="section-header">
-            <h2>About Me</h2>
-            <div class="divider"></div>
+    <!-- About -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-card">
+                <p>I'm a game developer focused on building complete, playable experiences. I work primarily with Godot
+                    Engine and enjoy every layer of game development — from core gameplay mechanics and enemy AI to
+                    visual effects and audio design. I believe in clean code architecture and polished game feel.</p>
+                <a href="mailto:pk67@buffalo.edu" class="contact-email">
+                    ✉ pk67@buffalo.edu
+                </a>
+            </div>
         </div>
-        <div class="about-card">
-            <p>I'm a game developer focused on building complete, playable experiences. I work primarily with Godot Engine and enjoy every layer of game development — from core gameplay mechanics and enemy AI to visual effects and audio design. I believe in clean code architecture and polished game feel.</p>
-            <a href="mailto:pk67@buffalo.edu" class="contact-email">
-                ✉ pk67@buffalo.edu
-            </a>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <p>© 2026 Pavan Kumar Kulkarni · Built from scratch ·
-            <a href="https://github.com/pavan-kumar-kulkarni" target="_blank">GitHub</a>
-        </p>
-    </div>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Pavan Kumar Kulkarni · Built from scratch ·
+                <a href="https://github.com/pavan-kumar-kulkarni" target="_blank">GitHub</a>
+            </p>
+        </div>
+    </footer>
 
 </body>
+
 </html>
